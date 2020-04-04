@@ -1,0 +1,25 @@
+---
+title: 'Data Product Week 3 Assignment: Plot with Plotly'
+author: "Han"
+date: "4/4/2020"
+output:
+  slidy_presentation: default
+  beamer_presentation: default
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Plot with Plotly
+
+```{r pressure}
+library(plotly)
+plot_ly(mtcars, x = mtcars$disp, y = mtcars$mpg, color = rownames(mtcars), type = "scatter") %>%
+  layout(xaxis = list(title = "MPG"), yaxis = list(title = "Displacement"))
+```
+
+
+
+
